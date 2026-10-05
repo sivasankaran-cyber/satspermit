@@ -1,0 +1,21 @@
+{
+  "name": "satspermit",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Task-bound payment permissions for AI agents. Local hackathon prototype.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "test": "node --test --test-isolation=none tests/*.test.ts",
+    "sandbox": "node --env-file-if-exists=.env scripts/setup-sandbox.ts",
+    "agent": "node scripts/agent-client.ts",
+    "verify": "node scripts/verify-evidence.ts"
+  },
+  "dependencies": {
+    "@getalby/sdk": "8.0.3",
+    "bolt11": "1.4.1"
+  }
+}
